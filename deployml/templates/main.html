@@ -7,48 +7,39 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
-
     <p class="text-center fs-1 fw-bold">
         Iris Django Application
     </p>
-   
     <hr>
     {%  if result %}
     <div class="alert alert-success" role="alert">
         <h1>Flower you are trying to classify is {{result}}</h1>
-    </div>
-       
+    </div>  
     {% endif %}
-
     <form action="" method="POST">
         {% csrf_token %}
         <br>
         <div class="input-group input-group-lg">
             <span class="input-group-text" id="inputGroup-sizing-lg">Sepal Length</span>
             <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="sepal_length" required>
-        </div>
-        
+        </div> 
         <br>
         <div class="input-group input-group-lg">
             <span class="input-group-text" id="inputGroup-sizing-lg">Sepal Width</span>
             <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="sepal_width" required>
         </div>
-
         <br>
         <div class="input-group input-group-lg">
             <span class="input-group-text" id="inputGroup-sizing-lg">Petal Length</span>
             <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="petal_length" required>
         </div>
-        
         <br>
         <div class="input-group input-group-lg">
             <span class="input-group-text" id="inputGroup-sizing-lg">Petal Width</span>
             <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="petal_width" required>
         </div>
-
         <br>
         <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-        <!-- <input type="submit"> -->
     </form>
 </body>
 </html>
